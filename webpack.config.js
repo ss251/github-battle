@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./app/index.js",
@@ -17,6 +18,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "app/index.html",
+    }),
+    // fix "process is not defined" error:
+    new webpack.ProvidePlugin({
+      process: "process/browser",
     }),
   ],
 };
