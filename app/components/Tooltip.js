@@ -45,7 +45,7 @@ export default class Tooltip extends React.Component {
     });
   }
   render() {
-    const { text } = this.props;
+    const { text, children } = this.props;
     const { hovering } = this.state;
     return (
       <div
