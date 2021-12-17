@@ -49,7 +49,7 @@ function Instructions() {
 }
 
 class PlayerInput extends React.Component {
-  staet = {
+  state = {
     username: "",
   };
 
